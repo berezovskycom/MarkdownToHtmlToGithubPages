@@ -1,1 +1,1 @@
-## This markdown file can be formatted to html and automatically added to gh-pages
+## This markdown file can be formatted to html and then automatically added to gh-pages
