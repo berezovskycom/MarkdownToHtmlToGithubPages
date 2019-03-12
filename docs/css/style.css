@@ -1,3 +1,7 @@
 body, a, input, button {
 	font-family: 'Open Sans', sans-serif;
 }
+
+.how-to-use {
+	background-color: red;
+}
