@@ -3,6 +3,10 @@ const fs 				= require(`fs`),
 			showdown  = require(`showdown`),
 			converter = new showdown.Converter();
 
+const commonmark = require('commonmark');
+			reader = new commonmark.Parser();
+			writer = new commonmark.HtmlRenderer();
+
 let indexPage = ``;
 
 const config = {
@@ -29,7 +33,9 @@ const readMarkdown = new Promise((resolve, reject) => {
 	const { markdownFile } = config;
 	fs.readFile(markdownFile, (err, data) => {
 		console.log(`getting md file`);
-		resolve(converter.makeHtml(data.toString()));
+		const parsed = reader.parse(data.toString());
+		const result = writer.render(parsed);
+		resolve(result);
 	})
 });
 

@@ -1,0 +1,26 @@
+{
+  "name": "MarkdownToHtmlToGithubPages",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">     <a href=\"https://flawlessapp.io/feedback?github\">         <img src=\"Awesome-design-tools-cover.png\" alt=\"Awesome-Design-Tools\"/>     </a> </p>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berezovskycom/MarkdownToHtmlToGithubPages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berezovskycom/MarkdownToHtmlToGithubPages/issues"
+  },
+  "homepage": "https://github.com/berezovskycom/MarkdownToHtmlToGithubPages#readme",
+  "devDependencies": {
+    "commonmark": "^0.28.1"
+  }
+}
