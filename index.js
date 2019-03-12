@@ -8,7 +8,7 @@ let indexPage = ``;
 const config = {
 	markdownFile: `./markdown/README.md`,
 	filenameForMarkdownHtml: `main.html`,
-	index: `./gh-pages/index.html`,
+	index: `./docs/index.html`,
 	components: [
 		`components/header.html`,
 		`components/main.html`,
@@ -28,7 +28,7 @@ const writeHtml = (html) => {
 const readMarkdown = new Promise((resolve, reject) => {
 	const { markdownFile } = config;
 	fs.readFile(markdownFile, (err, data) => {
-		console.log(`getting md file`)
+		console.log(`getting md file`);
 		resolve(converter.makeHtml(data.toString()));
 	})
 });
@@ -37,10 +37,8 @@ function readFile(fileName) {
   return new Promise((resolve, reject) => {
     fs.readFile(fileName, 'utf8', function (error, data) {
       if (error) return reject(error);
-
       indexPage += data;
-      console.log(`pasting ${fileName}`)
-
+      console.log(`pasting ${fileName}`);
       resolve();
     })
   });
@@ -53,7 +51,7 @@ async function createIndexPage() {
 	await readFile(components[2]);
 	await fs.writeFile(index, indexPage, (err, data) => {
 	  if (err) console.log(err);
-	  console.log(`written index page`)
+	  console.log(`wrote index page`);
 	})
 }
 
